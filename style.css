@@ -66,3 +66,15 @@ p4{
   top:900px;
   z-index: 0;
 }
+
+@media (max-width: 900px) {
+  body {background-image: url(https://3.bp.blogspot.com/-r1gOylygujk/VpzfnK5a3EI/AAAAAAAAAPM/JuhST-sbmzE/s640/IMG_1333.jpg);}
+}
+
+@media (max-width: 700px) {
+  body {background-image: url(https://4.bp.blogspot.com/-rCDZA3kfqv8/Vpzfn0ujAsI/AAAAAAAAAPQ/0Q2rLQtk2KU/s640/IMG_5268.jpg);}
+}
+
+@media (max-width: 500px) {
+  body {background-image: url(https://2.bp.blogspot.com/-N6cTqXCfb1w/Vpzfphn6QSI/AAAAAAAAAP0/DrikSIoVRbY/s640/IMG_7676.jpg);}
+}

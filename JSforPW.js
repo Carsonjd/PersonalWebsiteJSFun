@@ -13,7 +13,7 @@ $(document).ready(function() {
     queue: false
   });
   // console.log($('html')children.length);
-});
+
 
 var headshot = $("#headshot");
 var p2Image = $("<img>")
@@ -33,7 +33,7 @@ var gifArray = ["https://giphy.com/embed/adUv6OrYxCH4Y"
 ,
   "https://giphy.com/embed/JIX9t2j0ZTN9S"
   ,
-  "https://giphy.com/embed/3o7TKzvWqnLjZ32EQ8"
+  "https://media.giphy.com/media/3ov9jZjJCIvt11F2iQ/giphy.gif"
   ,
   "https://giphy.com/embed/HCK7W8Qb52ifS"
   ,
@@ -41,39 +41,48 @@ var gifArray = ["https://giphy.com/embed/adUv6OrYxCH4Y"
 ];
 
 
+
+// function imageDisplay() {
+//   var randoIndex = Math.ceil(Math.random()*imgUrlArray.length-1);
+//     var body = $('body');
+//       body.style.backgroundImage.url = imgUrlArray[randoIndex];
+//       body.fadeIn(1000);
+//       body.delay(2000);
+//       body.fadeOut(1000);
+// }
+// setInterval(function(){imageDisplay()}, 4000);
+
 function imageDisplay() {
-  var counter = 0;
-  setInterval(function() {
-    var p3 = $('p3')
+  var randoIndex = Math.ceil(Math.random()*imgUrlArray.length-1);
+    var p3 = $('p3');
     p3.empty();
     var imgTag = $('<img>');
-    if (counter < imgUrlArray.length) {
-      imgTag.attr('src', imgUrlArray[counter]);
+      imgTag.attr('src', imgUrlArray[randoIndex]);
       imgTag.addClass('imageShadow');
       p3.append(imgTag);
-      imgTag.fadeIn(3000);
-      imgTag.delay(2000);
-      imgTag.animate({
-        left: 100
+      // p3.animate({
+      //   right: '10px'
+      // },
+      //   3000, false
+      // );
+
+      // p2Image.animate({
+      //   width: '500'
+      // }, 3000);
+
+
+      p3.animate({
+        bottom: '10px'
       }, {
-        duration: 1000,
+        duration: 2000,
         queue: false
       });
-      imgTag.animate({
-        bottom: 100
-      }, {
-        duration: 1000,
-        queue: false
-      });
-      imgTag.fadeOut(1000);
-      counter++
-    }
-    if (counter === imgUrlArray.length) {
-      counter * 0;
-    }
-  }, 6000)
+      p3.fadeIn(1000);
+      p3.delay(2000);
+      p3.fadeOut(1000);
 }
-imageDisplay();
+
+setInterval(function(){imageDisplay()}, 4000);
 
 var i = 0;
 function gifChange(){
@@ -91,4 +100,6 @@ function gifChange(){
 //       gifChange();
 //     });
 
-<iframe width="640" height="480" frameborder="0" allowfullscreen src="https://archive.org/embed/WRC_20100319_043500_Late_Night_With_Jimmy_Fallon?start=1140&end=1200" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+
+});
